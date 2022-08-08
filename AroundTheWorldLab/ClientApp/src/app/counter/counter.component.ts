@@ -31,6 +31,14 @@ export class CounterComponent {
     }
     let foundCountryName = document.getElementById("CountryName");
     foundCountryName!.innerText = foundCountry?.name;
+   
+    let foundCountryLanguage = document.getElementById("CountryOfficialLanguage");
+    foundCountryLanguage!.innerText = foundCountry?.officialLanguage;
+
+    let newColorString = "color:" + foundCountry?.primaryColor;
+    foundCountryName.setAttribute("style", newColorString);
+
+    foundCountryLanguage.setAttribute("style", newColorString);
   }
 }
 
